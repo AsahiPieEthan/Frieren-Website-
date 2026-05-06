@@ -1301,7 +1301,7 @@ nav.scrolled .nav__links a {
 }
 .skill__name {
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.15em;
   color: var(--ink);
   text-transform: uppercase;
@@ -1374,6 +1374,76 @@ nav.scrolled .nav__links a {
 }
 .contact__link:hover::after {
   width: 100%;
+}
+
+.contact-btn__main {
+  position: relative;
+  padding: 14px 32px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #f5f5f5;
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* subtle glow layer */
+.contact-btn__main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* hover state */
+.contact-btn__main:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contact-btn__main:hover::before {
+  opacity: 1;
+}
+
+/* click feel */
+.contact-btn__main:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* optional “magic shimmer line” */
+.contact-btn__main::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+}
+
+.contact-btn__main:hover::after {
+  left: 120%;
 }
 
 /* ── FOOTER ───────────────────────────────────── */
