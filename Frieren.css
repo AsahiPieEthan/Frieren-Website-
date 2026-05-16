@@ -1535,12 +1535,6 @@ footer {
   user-select: none;
 }
 
-@media (max-width: 600px) {
-  .nav-btn { display: block; }
-  .nav__links { display: none; }
-  .nav-btn:hover { color: var(--accent-deep); } 
-}
-
   .about {
     padding: 6rem 2rem;
   }
@@ -1693,4 +1687,10 @@ nav.scrolled .nav-btn {
   .stat__row {
     gap: 1.5rem;
   }
+}
+
+@media (max-width: 600px) {
+  .nav-btn { display: block; }
+  .nav__links { display: none; }
+  .nav-btn:hover { color: var(--accent-deep); } 
 }
