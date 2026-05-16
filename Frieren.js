@@ -337,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ProgressBar.init();
   Petals.init();
   SmoothScroll.init();
+  MobileMenu.init();
 });
 
 /* ═════ MUSICS ════════════════════════════════════════ */ 
@@ -428,3 +429,32 @@ window.addEventListener("click", () => {
     playSong();
   }
 }, { once: true });
+
+const MobileMenu = {
+  btn: null, menu: null, open: false,
+  init() {
+    this.btn  = document.querySelector('.nav-btn');
+    this.menu = document.getElementById('mobileMenu');
+    if (!this.btn || !this.menu) return;
+
+    this.btn.addEventListener('click', () => this.toggle());
+
+    // Close on link click
+    this.menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => this.close());
+    });
+  },
+  toggle() { this.open ? this.close() : this.open_(); },
+  open_() {
+    this.open = true;
+    this.menu.classList.add('open');
+    this.btn.textContent = '✕';
+    document.body.style.overflow = 'hidden';
+  },
+  close() {
+    this.open = false;
+    this.menu.classList.remove('open');
+    this.btn.textContent = '☰';
+    document.body.style.overflow = '';
+  }
+};

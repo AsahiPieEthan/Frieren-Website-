@@ -1524,6 +1524,22 @@ footer {
   .nav__links {
     gap: 1.8rem;
   }
+  
+  .nav-btn {
+  display: none; /* hidden on desktop */
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 510;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .nav-btn { display: block; }
+  .nav__links { display: none; }
+  .nav-btn:hover { color: var(--accent-deep); } 
+}
 
   .about {
     padding: 6rem 2rem;
@@ -1599,6 +1615,69 @@ footer {
   }
 }
 
+/* ── MOBILE MENU — global (outside all media queries) ── */
+.nav-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 510;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+nav.scrolled .nav-btn {
+  color: var(--ink);
+}
+
+.nav__mobile-menu {
+  display: none; /* hidden everywhere by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 22, 28, 0.92);
+  backdrop-filter: blur(20px);
+  z-index: 490;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 6rem 2rem 2.5rem;
+  height: auto;
+}
+
+.nav__mobile-menu.open {
+  display: flex; /* only JS can reveal it */
+}
+
+.nav__mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: color 0.3s;
+}
+
+.nav__mobile-menu.open a {
+  animation: menuItemIn 0.5s var(--ease-out-expo) forwards;
+}
+
+.nav__mobile-menu a:nth-child(1) { animation-delay: 0.05s; }
+.nav__mobile-menu a:nth-child(2) { animation-delay: 0.1s; }
+.nav__mobile-menu a:nth-child(3) { animation-delay: 0.15s; }
+.nav__mobile-menu a:nth-child(4) { animation-delay: 0.2s; }
+.nav__mobile-menu a:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes menuItemIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav__mobile-menu a:hover { color: var(--accent); }
 @media (max-width: 600px) {
   .skills__grid {
     grid-template-columns: 1fr;
