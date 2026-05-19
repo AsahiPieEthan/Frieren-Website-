@@ -1,3 +1,6 @@
+<img width="1000" height="400" alt="image" src="https://github.com/user-attachments/assets/68980a4b-2e66-4f8c-b533-587a7213ea99" />
+
+
 # ✦ Isekai Mage — Frieren Inspired Portfolio
 
 A cinematic, interactive personal portfolio inspired by *Frieren: Beyond Journey’s End*.  
