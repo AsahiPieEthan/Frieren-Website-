@@ -39,6 +39,9 @@ The site is designed to feel:
 - Custom cursor effects (dot + ring)
 - Responsive design for mobile and desktop
 
+## Quote
+- Auto-generated inspirational quotes for a dynamic and reflective experience.
+
 ---
 
 ## 🛠️ Tech Stack
@@ -52,3 +55,11 @@ The site is designed to feel:
 ---
 
 ## 📁 Project Structure
+<img width="1909" height="942" alt="image" src="https://github.com/user-attachments/assets/55d0a789-345d-49e1-8968-e242114dfb46" />
+<img width="1891" height="931" alt="image" src="https://github.com/user-attachments/assets/2484ff8b-e227-4df5-bf56-a59764ce9b56" />
+<img width="1904" height="924" alt="image" src="https://github.com/user-attachments/assets/1fc2bbc2-0983-423e-94f5-e9fc3ead2acb" />
+<img width="1892" height="519" alt="image" src="https://github.com/user-attachments/assets/fe7d7b6a-fc83-4dba-83f0-446bf9ff1648" />
+<img width="1909" height="942" alt="image" src="https://github.com/user-attachments/assets/a0755e07-2055-4250-9c03-ea50e29e5e90" />
+<img width="1909" height="931" alt="image" src="https://github.com/user-attachments/assets/5e5a9245-1c4a-4795-b5c8-dffe940a9423" />
+<img width="1906" height="926" alt="image" src="https://github.com/user-attachments/assets/61d7cc90-828b-45d9-a9df-1412fa34358c" />
+
