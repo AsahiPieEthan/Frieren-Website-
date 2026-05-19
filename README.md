@@ -1,5 +1,6 @@
 
-https://github.com/user-attachments/assets/30ad4d05-fb06-4af0-a8fc-65d90dbf67ef
+<img width="1000" height="250" alt="Frieren Website" src="https://github.com/user-attachments/assets/d1853733-2616-41aa-a481-75a0a563c531" />
+
 
 # ✦ Isekai Mage — Frieren Inspired Portfolio
 
