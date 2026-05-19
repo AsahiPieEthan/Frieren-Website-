@@ -1460,7 +1460,24 @@ footer {
   letter-spacing: 0.45em;
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
 }
+
+.footer__desc {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.486);
+  line-height: 1.9;
+  font-style: italic;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer__contacts {
+  display: flex;
+  gap: 2rem;
+}
+
 .footer__copy {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.2);
