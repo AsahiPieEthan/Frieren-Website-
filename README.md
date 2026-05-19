@@ -1,5 +1,5 @@
-<img width="1000" height="400" alt="image" src="https://github.com/user-attachments/assets/68980a4b-2e66-4f8c-b533-587a7213ea99" />
 
+https://github.com/user-attachments/assets/30ad4d05-fb06-4af0-a8fc-65d90dbf67ef
 
 # ✦ Isekai Mage — Frieren Inspired Portfolio
 
