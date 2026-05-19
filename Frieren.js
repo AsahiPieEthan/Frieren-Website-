@@ -458,3 +458,34 @@ const MobileMenu = {
     document.body.style.overflow = '';
   }
 };
+
+// Automatic quote 
+
+const quote = { 
+  "✦ The world is vast, and our time is short. Let's make the most of it together.": "Frieren",
+  "✦ Even if we part ways, the memories we made will always be with us.": "Frieren",
+  "✦ The journey may end, but the bonds we formed will never fade.": "Frieren",
+  "✦ Let's cherish the moments we have and create new ones along the way.": "Frieren"
+}
+
+let quoteElement = document.getElementById("quote");
+
+
+ function changeQuote() {
+  const randomIndex = Math.floor(Math.random() * Object.keys(quote).length);
+  const randomQuote = Object.keys(quote)[randomIndex];
+
+  // change text
+  quoteElement.textContent = randomQuote;
+
+  // reset animation
+  quoteElement.classList.remove("reappear");
+
+  // force reflow (important trick)
+  void quoteElement.offsetWidth;
+
+  // re-add animation class
+  quoteElement.classList.add("reappear");
+}
+
+setInterval(changeQuote, 4000);

@@ -1694,3 +1694,12 @@ nav.scrolled .nav-btn {
   .nav__links { display: none; }
   .nav-btn:hover { color: var(--accent-deep); } 
 }
+
+@keyframes reappear {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.reappear {
+  animation: reappear 1s ease-out;
+}
