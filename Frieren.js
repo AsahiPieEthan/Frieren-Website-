@@ -465,7 +465,10 @@ const quote = {
   "✦ The world is vast, and our time is short. Let's make the most of it together.": "Frieren",
   "✦ Even if we part ways, the memories we made will always be with us.": "Frieren",
   "✦ The journey may end, but the bonds we formed will never fade.": "Frieren",
-  "✦ Let's cherish the moments we have and create new ones along the way.": "Frieren"
+  "✦ Let's cherish the moments we have and create new ones along the way.": "Frieren",
+  "✦ No matter where life takes us, our friendship will always be a part of who we are.": "Frieren",
+  "✦ The adventure may be over, but the story of our friendship will continue to unfold.": "Frieren",
+  "✦ Let's keep exploring the world and discovering new wonders together.": "Frieren",
 }
 
 let quoteElement = document.getElementById("quote");
