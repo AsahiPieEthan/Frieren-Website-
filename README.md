@@ -42,6 +42,7 @@ The site is designed to feel:
 - Scroll-based reveal animations
 - Custom cursor effects (dot + ring)
 - Responsive design for mobile and desktop
+- Transform property for character card (neuromorphism)
 
 ## Quote
 - Auto-generated inspirational quotes for a dynamic and reflective experience.
