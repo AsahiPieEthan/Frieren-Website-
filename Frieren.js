@@ -621,3 +621,58 @@ function changeQuote() {
 }
 
 setInterval(changeQuote, 4000);
+
+/* ── TILT CARDS ───────────────────────────────── */
+const TiltCards = {
+  init() {
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      const inner = card.querySelector('.tilt-card__inner');
+      const shine = card.querySelector('.tilt-card__shine');
+      const glow  = card.querySelector('.tilt-card__glow');
+ 
+      let bounds;
+      const MAX_TILT = 14; // degrees
+ 
+      card.addEventListener('mouseenter', () => {
+        bounds = card.getBoundingClientRect();
+        inner.style.transition = 'box-shadow 0.3s ease, border-color 0.3s ease';
+      });
+ 
+      card.addEventListener('mousemove', e => {
+        const x = e.clientX - bounds.left;
+        const y = e.clientY - bounds.top;
+        const cx = bounds.width  / 2;
+        const cy = bounds.height / 2;
+ 
+        // normalise -1 to 1
+        const nx = (x - cx) / cx;
+        const ny = (y - cy) / cy;
+ 
+        const rotateX = -ny * MAX_TILT;  // tilt up/down
+        const rotateY =  nx * MAX_TILT;  // tilt left/right
+ 
+        inner.style.transition = 'box-shadow 0.3s ease, border-color 0.3s ease';
+        inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
+ 
+        // move shine to cursor position
+        const pctX = (x / bounds.width)  * 100;
+        const pctY = (y / bounds.height) * 100;
+        shine.style.background = `radial-gradient(circle at ${pctX}% ${pctY}%, rgba(255,255,255,0.14) 0%, transparent 60%)`;
+ 
+        // move glow blob
+        glow.style.left = x + 'px';
+        glow.style.top  = y + 'px';
+        glow.style.transform = 'translate(-50%,-50%)';
+      });
+ 
+      card.addEventListener('mouseleave', () => {
+        inner.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease, border-color 0.3s ease';
+        inner.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
+        shine.style.background = 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.12) 0%, transparent 65%)';
+      });
+    });
+  }
+};
+ 
+// call inside DOMContentLoaded alongside the rest:
+// TiltCards.init();
