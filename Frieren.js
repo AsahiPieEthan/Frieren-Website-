@@ -631,7 +631,7 @@ const TiltCards = {
       const glow  = card.querySelector('.tilt-card__glow');
  
       let bounds;
-      const MAX_TILT = 14; // degrees
+      const MAX_TILT = 14; // degreesmouse
  
       card.addEventListener('mouseenter', () => {
         bounds = card.getBoundingClientRect();
